@@ -1,0 +1,48 @@
+<resources>
+
+    <string name="app_name">OrientationChanges</string>
+
+    <string name="title_main_activity">Main Activity</string>
+
+    <string name="good_color">= What you should do</string>
+
+    <!-- Demo Titles -->
+    <string name="title_configChanges_flag_with">configChanges - With the Flag</string>
+    <string name="title_configChanges_flag_without">configChanges - Without the Flag</string>
+    <string name="title_orientation_flag">screenOrientation - With the Flag</string>
+    <string name="title_fragment_readding_every_oncreate">Fragment Re-adding - Every Time onCreate is Called</string>
+    <string name="title_fragment_readding_non_recreations">Fragment Re-adding - Only When Not Re-creating the Activity</string>
+    <string name="title_fragment_backstack">Fragment Backstack Demo</string>
+    <string name="title_recreating_list_view">Recreating a ListView</string>
+    <string name="title_async_task_ignore">Handling AsyncTasks - Ignoring Them</string>
+    <string name="title_async_task_ignore_v2">Handling AsyncTasks - Ignoring Them V2</string>
+    <string name="title_async_task_cancel">Handling AsyncTasks - Cancelling Them</string>
+    <string name="title_async_task_retain">Handling AsyncTasks - Use a Retained Fragment</string>
+
+    <!-- configChanges Flag -->
+    <string name="configChanges_flag_text_portrait">PORTRAIT\n\nThis is the regular version of this layout. If you are using the configChanges flag on your Activity, then this same layout will appear when you rotate your device because Android won\'t reload any resources.</string>
+    <string name="configChanges_flag_text_landscape">LANDSCAPE\n\nThis is the landscape version of this layout (layout-land). If you aren\'t using the configChanges flag on your Activity then this layout will appear because Android did reload your resources when the configuration change happened.</string>
+
+    <!-- screenOrientation Flag -->
+    <string name="orientation_flag_text">This screen will not rotate because the android:screenOrientation flag is set to "portrait" for this Activity.</string>
+
+    <!-- Fragments -->
+    <string name="fragment_readding_every_oncreate_text">This fragment is being re-added every time you rotate the screen. It has a semi-transparent background, so you\'ll notice the background get darker and darker after each rotation. This Fragment will also lose its state after each rotation.</string>
+    <string name="fragment_readding_non_recreations_text">This fragment is only re-added if savedInstanceState == null (when there\'s an orientation change, we won\'t bother adding the Fragment because Android will take care of it for us). This still has a semi-transparent background, but you won\'t notice it get darker here. You\'ll also notice our state is properly saved and restored.</string>
+    <string name="fragment_readding_btn_text">Click to increment counter</string>
+
+    <string name="btn_next_fragment">Next Fragment</string>
+    <string name="fragment_backstack_fragment_x">Fragment %1$d</string>
+
+    <!-- Re-creating a ListView -->
+    <string name="btn_add_list_item">Add List Item</string>
+
+    <!-- Handling AsyncTasks -->
+    <string name="async_task_ignore_info">Here we will be starting a task then ignoring it. We won\'t bother to cancel it or anything when an orientation change occurs. This means the task will hold onto an Activity reference and eat up memory.</string>
+    <string name="async_task_ignore_v2_info">Here we will be starting a task then ignoring it. But this time we\'ll show a ProgressDialog and if you rotate the device before the task is done, when the task does eventually complete the app will crash because we\'ll be dismissing a dialog that\'s not actually attached to a window. Watch the logs to see exactly what\'s happening.</string>
+    <string name="async_task_cancel_info">When you rotate the device the task will be cancelled then restarted. This isn\'t ideal, but it will avoid leaking Activity references and it will avoid accidentally calling methods on Views that aren\'t attached to a window.</string>
+    <string name="async_task_retain_info">This time the task is hosted in a retained Fragment, so the task will keep running while the device changes orientations and we still handle memory leaks and illegal states properly.</string>
+    <string name="btn_start_task">Start Task</string>
+    <string name="btn_cancel_task">Cancel Task</string>
+
+</resources>

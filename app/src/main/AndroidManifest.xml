@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.noaht.orientationchanges">
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_main_activity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".demo.ConfigChangesFlagWithActivity"
+            android:label="@string/title_configChanges_flag_with"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:name=".demo.ConfigChangesFlagWithoutActivity"
+            android:label="@string/title_configChanges_flag_without"/>
+
+        <activity
+            android:name=".demo.OrientationFlagActivity"
+            android:label="@string/title_orientation_flag"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.FragmentReaddingEveryOnCreateActivity"
+            android:label="@string/title_fragment_readding_every_oncreate"/>
+
+        <activity
+            android:name=".demo.FragmentReaddingNonRecreationsActivity"
+            android:label="@string/title_fragment_readding_non_recreations"/>
+
+        <activity
+            android:name=".demo.FragmentBackStackActivity"
+            android:label="@string/title_fragment_backstack" />
+
+        <activity
+            android:name=".demo.RecreatingListViewActivity"
+            android:label="@string/title_recreating_list_view"/>
+
+        <activity
+            android:name=".demo.AsyncTaskIgnoreActivity"
+            android:label="@string/title_async_task_ignore"/>
+
+        <activity
+            android:name=".demo.AsyncTaskIgnoreV2Activity"
+            android:label="@string/title_async_task_ignore_v2"/>
+
+        <activity
+            android:name=".demo.AsyncTaskCancelActivity"
+            android:label="@string/title_async_task_cancel"/>
+
+        <activity
+            android:name=".demo.AsyncTaskRetainActivity"
+            android:label="@string/title_async_task_retain"/>
+
+    </application>
+
+</manifest>
